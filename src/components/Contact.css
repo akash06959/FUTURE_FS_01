@@ -25,7 +25,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
   transition: var(--transition);
 }
 
@@ -107,7 +107,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 5px 14px rgba(15, 23, 42, 0.08);
   text-decoration: none;
   transition: var(--transition);
   margin-bottom: 16px;
@@ -119,9 +119,9 @@
 
 .contact-action-box:hover {
   transform: translateY(-3px);
-  background: var(--accent-light);
-  border-color: var(--accent-primary);
-  box-shadow: var(--shadow-md);
+  background: rgba(0, 98, 177, 0.06);
+  border-color: rgba(0, 98, 177, 0.4);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.12);
   text-decoration: none;
 }
 

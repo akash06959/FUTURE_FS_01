@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
 import Skills from './components/Skills';
-import Projects from './components/Projects';
 import Education from './components/Education';
 import Experience from './components/Experience';
-import Certifications from './components/Certifications';
-import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
+
+const Projects = lazy(() => import('./components/Projects'));
+const Certifications = lazy(() => import('./components/Certifications'));
+const Resume = lazy(() => import('./components/Resume'));
 
 function App() {
   return (
@@ -20,11 +21,17 @@ function App() {
       <main>
         <About />
         <Skills />
-        <Projects />
+        <Suspense fallback={<div className="section-loader">Loading projects...</div>}>
+          <Projects />
+        </Suspense>
         <Education />
         <Experience />
-        <Certifications />
-        <Resume />
+        <Suspense fallback={<div className="section-loader">Loading certifications...</div>}>
+          <Certifications />
+        </Suspense>
+        <Suspense fallback={<div className="section-loader">Loading resume...</div>}>
+          <Resume />
+        </Suspense>
         <Contact />
       </main>
       <Footer />

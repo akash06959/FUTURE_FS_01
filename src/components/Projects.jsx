@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaVideo, FaTimes, FaCode } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaTimes, FaCode } from 'react-icons/fa';
 import './Projects.css';
+
+const PROJECT_IMAGE_DIMENSIONS = { width: 800, height: 520 };
 
 const projects = [
   {
@@ -8,7 +10,7 @@ const projects = [
     tagline: 'Smart Agriculture Management Platform',
     description: 'Web platform for farm data management and crop monitoring. Features ML-powered soil analysis, crop condition tracking, and sensor data integration. Scalable for future features like automated irrigation recommendations.',
     techStack: ['FastAPI', 'React', 'Python ML Models'],
-    image: '/images/agronova-cover.png',
+    image: '/images/agronova-cover.webp',
     githubUrl: 'https://github.com/akash06959/Agronova',
     liveUrl: 'https://agronova-dun.vercel.app/',
     hasLiveDemo: false,
@@ -18,7 +20,7 @@ const projects = [
     tagline: 'E-Learning Course Platform',
     description: 'Web platform for subject-oriented course enrollment and material access. Supports course browsing, purchase, and post-enrollment content access. Scalable for future features like quizzes and progress tracking.',
     techStack: ['Django', 'React'],
-    image: '/images/elearning-cover.png',
+    image: '/images/elearning-cover.webp',
     githubUrl: 'https://github.com/akash06959/Elearningplatform',
     liveUrl: 'https://github.com/akash06959/Elearningplatform',
     hasLiveDemo: false,
@@ -28,7 +30,7 @@ const projects = [
     tagline: 'Custom PC Showcase & Storefront',
     description: 'A curated storefront experience for custom PCs that blends product storytelling with modular card layouts, enabling visitors to browse builds, compare specs, and jump to purchase links effortlessly.',
     techStack: ['React', 'Tailwind CSS', 'Vite'],
-    image: '/images/pchaven-cover.png',
+    image: '/images/pchaven-cover.webp',
     githubUrl: 'https://github.com/akash06959/PcHaven',
     liveUrl: 'https://github.com/akash06959/PcHaven',
     hasLiveDemo: false,
@@ -103,9 +105,13 @@ const Projects = () => {
             <div key={index} className="project-card">
               {project.image && (
                 <div className="project-image">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={PROJECT_IMAGE_DIMENSIONS.width}
+                    height={PROJECT_IMAGE_DIMENSIONS.height}
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.parentElement.style.background = 'var(--bg-secondary)';

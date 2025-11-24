@@ -12,13 +12,17 @@ const About = () => {
           <div className="about-profile-section">
             <div className="about-image-container">
               <div className="about-image-blob"></div>
-              <img 
-                src="/images/profile.png" 
-                alt="M. Akash" 
-                className="about-image" 
+              <img
+                src="/images/profile.webp"
+                alt="M. Akash"
+                className="about-image"
+                loading="lazy"
+                decoding="async"
+                width="512"
+                height="512"
                 onError={(e) => {
                   e.target.style.display = 'none';
-                }} 
+                }}
               />
             </div>
             <div className="about-text-content">
