@@ -84,7 +84,9 @@
   font-size: var(--fz-md);
   line-height: 1.6;
   color: var(--text-body);
-  text-align: justify;
+  text-align: left;
+  text-align-last: left;
+  word-spacing: normal;
 }
 
 .education-coursework strong {

@@ -10,7 +10,7 @@
   min-height: calc(100vh - var(--nav-height));
   margin-top: var(--nav-height);
   padding: 0;
-  background-color: #ffffff;
+  background-color: transparent;
   color: var(--text-heading);
   overflow: hidden;
 }

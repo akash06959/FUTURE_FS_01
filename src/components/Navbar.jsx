@@ -41,8 +41,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="nav-container">
+    <nav className="navbar">
+      <div className="nav-container">
           <a href="#top" className="nav-brand">
             M. Akash
           </a>
@@ -62,9 +62,9 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-          </ul>
-        </div>
-      </nav>
+      </ul>
+      </div>
+    </nav>
       <div
         className={`nav-backdrop ${isMenuOpen ? 'nav-backdrop--visible' : ''}`}
         onClick={closeMenu}

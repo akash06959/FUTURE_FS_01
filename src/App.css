@@ -47,6 +47,9 @@ body {
   font-family: var(--font-primary);
   margin: 0;
   background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 98, 177, 0.08) 1px, transparent 0),
+    radial-gradient(circle at 20px 20px, rgba(0, 98, 177, 0.04) 1px, transparent 0);
+  background-size: 140px 140px;
   color: var(--text-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 html {
@@ -124,7 +127,9 @@ p {
   margin: 0 0 15px;
   color: var(--text-body);
   line-height: 1.7;
-  text-align: justify;
+  text-align: left;
+  text-align-last: left;
+  word-spacing: normal;
 }
 
 a {
@@ -198,5 +203,38 @@ a:hover {
 
   h2 {
     margin-bottom: 40px;
+  }
+}
+
+/* ============================================
+   MOBILE ALIGNMENT HELPERS
+   ============================================ */
+
+@media (max-width: 767px) {
+  .hero-content,
+  .hero-text,
+  .about-text-content {
+    text-align: center !important;
+    padding-top: 24px !important;
+  }
+
+  .hero-subheadline,
+  .about-intro {
+    padding-left: 0 !important;
+    margin-top: 16px;
+    font-size: 16px !important;
+  }
+
+  .cta-button,
+  .cta-button-secondary,
+  .download-button {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto 0 auto !important;
+    display: block;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
   }
 }
