@@ -24,10 +24,19 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.navbar ul {
+.nav-brand {
+  font-size: var(--fz-lg);
+  font-weight: 700;
+  color: var(--text-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,11 +46,11 @@
   padding: 0;
 }
 
-.navbar li {
+.nav-links li {
   margin: 0;
 }
 
-.navbar a {
+.nav-links a {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -55,11 +64,49 @@
   transition: var(--transition);
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: var(--accent-primary);
   background: rgba(0, 98, 177, 0.12);
   text-decoration: none;
   transform: translateY(-2px);
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-heading);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  background: var(--accent-light);
+  color: var(--accent-primary);
+}
+
+.nav-backdrop {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+.nav-backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ============================================
@@ -75,12 +122,47 @@
     padding: 0 20px;
   }
 
-  .navbar ul {
-    gap: 16px;
+  .nav-brand {
+    font-size: var(--fz-md);
   }
 
-  .navbar a {
-    font-size: var(--fz-xs);
-    padding: 6px 10px;
+  .nav-toggle {
+    display: flex;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: var(--nav-height) 0 0 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 20px 80px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links--open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    font-size: var(--fz-lg);
+    padding: 14px;
+    border-radius: var(--border-radius);
   }
 }

@@ -160,3 +160,38 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-light);
 }
+
+/* ============================================
+   RESPONSIVE GLOBAL SPACING
+   ============================================ */
+
+@media (max-width: 1024px) {
+  main {
+    gap: 70px;
+    padding-top: calc(var(--nav-height) + 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    gap: 60px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    gap: 48px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+}
