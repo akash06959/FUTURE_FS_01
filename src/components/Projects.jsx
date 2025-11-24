@@ -6,7 +6,7 @@ const projects = [
   {
     name: 'AgroNova',
     tagline: 'Smart Agriculture Management Platform',
-    description: 'Web platform for farm data management and crop monitoring. Supports soil analysis, crop condition tracking, and sensor data integration. Scalable for future features like predictive analytics and automated irrigation recommendations.',
+    description: 'Web platform for farm data management and crop monitoring. Features ML-powered soil analysis, crop condition tracking, and sensor data integration. Scalable for future features like automated irrigation recommendations.',
     techStack: ['FastAPI', 'React', 'Python ML Models'],
     image: '/images/agronova-cover.png',
     githubUrl: 'https://github.com/akash06959/Agronova',

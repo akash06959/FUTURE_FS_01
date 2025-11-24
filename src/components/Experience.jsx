@@ -10,7 +10,7 @@ const Experience = () => {
         <div className="experience-items">
           <div className="experience-item">
           <div className="experience-header">
-            <h3>President, Legal Electoral Literacy & Road Safety Club</h3>
+            <h3>President, Electoral Literacy &amp; Road Safety Clubs</h3>
             <span className="experience-date">July 2021 - March 2024</span>
           </div>
           <ul className="experience-contributions">

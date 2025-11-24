@@ -12,7 +12,7 @@ const Contact = () => {
           {/* Identity Section - No Boxes */}
           <div className="contact-identity">
             <h3 className="contact-name">M Akash</h3>
-            <p className="contact-title">Full-Stack Developer</p>
+            <p className="contact-title">Full-Stack Developer &amp; Data Analyst</p>
             <p className="contact-location">
               <FaMapMarkerAlt className="location-icon" />
               Idukki, Kerala, India
@@ -40,7 +40,7 @@ const Contact = () => {
             className="contact-action-box"
           >
             <FaGithub className="contact-icon" />
-            <span className="contact-action-text">akash06959</span>
+            <span className="contact-action-text">github.com/akash06959</span>
           </a>
         </div>
       </div>

@@ -64,7 +64,7 @@ const Header = () => {
             </div>
           </div>
           <p className="hero-subheadline">
-            I build scalable web applications and intelligent data solutions. By combining <strong>React & Node.js</strong> with <strong>Python & Machine Learning</strong>, I transform complex data into user-friendly products like AgroNova.
+            I build scalable web applications and intelligent data solutions. By combining <strong>React & Node.js</strong> with <strong>Python & Machine Learning</strong>, I ship usable intelligence today—like AgroNova&apos;s ML-powered soil analysis and sensor-aware monitoring—and design for what&apos;s next.
           </p>
           <div className="hero-cta">
             <a href="#projects" className="cta-button">
