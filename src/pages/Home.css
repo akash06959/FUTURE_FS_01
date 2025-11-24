@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+h2 {
+  text-align: center;
+}

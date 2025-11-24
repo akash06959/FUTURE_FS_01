@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --- BACKGROUNDS --- */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFA;
+  --bg-card: #FFFFFF;
+
+  /* --- TEXT --- */
+  --text-heading: #111111;
+  --text-body: #555555;
+  --text-light: #888888;
+
+  /* --- ACCENT (The "Maheshwari Blue") --- */
+  --accent-primary: #0062B1;
+  --accent-light: #EBF4FF;
+
+  /* --- BORDERS & SEPARATORS --- */
+  --border-subtle: #E5E5E5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* --- TYPOGRAPHY --- */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 24px;
+  --fz-heading: 42px;
+
+  /* --- SPACING & LAYOUT --- */
+  --border-radius: 8px;
+  --nav-height: 80px;
+  --shadow-sm: 0 2px 8px var(--shadow-color);
+  --shadow-md: 0 4px 16px var(--shadow-color);
+  --shadow-lg: 0 8px 24px var(--shadow-color);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 98, 177, 0.08) 1px, transparent 0),
+    radial-gradient(circle at 20px 20px, rgba(0, 98, 177, 0.04) 1px, transparent 0);
+  background-size: 140px 140px;
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: var(--nav-height);
+}
+
+section {
+  margin-bottom: 0;
+  padding: 80px 0;
+  position: relative;
+}
+
+section:first-of-type {
+  padding-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+h2 {
+  font-size: clamp(32px, 5vw, 42px);
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-align: left;
+  color: var(--text-heading);
+  position: relative;
+  display: block;
+  padding-bottom: 8px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  margin: 12px 0 0 0;
+  background-color: var(--accent-primary);
+  border-radius: 999px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+p {
+  margin: 0 0 15px;
+  color: var(--text-body);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}

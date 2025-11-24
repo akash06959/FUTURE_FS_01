@@ -1,0 +1,40 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  margin-top: 50px;
+  padding: 30px 50px;
+  text-align: center;
+  background: var(--bg-primary);
+  color: var(--text-light);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer p {
+  margin: 0;
+  font-size: var(--fz-sm);
+  color: var(--text-light);
+}
+
+.footer a {
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 25px 20px;
+  }
+}

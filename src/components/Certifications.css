@@ -1,0 +1,84 @@
+/* ============================================
+   CERTIFICATIONS SECTION
+   ============================================ */
+
+.certifications {
+  background: var(--bg-secondary);
+}
+
+.certifications-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.certifications h2 {
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.certifications-container:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.certification-card {
+  padding: 25px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.certification-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-primary);
+}
+
+.certification-card p {
+  margin: 0;
+  font-size: var(--fz-md);
+  line-height: 1.6;
+  color: var(--text-body);
+  text-align: justify;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .certifications-wrapper {
+    padding: 0 25px;
+  }
+
+  .certifications-container {
+    padding: 40px 30px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

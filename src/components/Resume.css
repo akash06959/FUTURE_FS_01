@@ -1,0 +1,248 @@
+/* ============================================
+   RESUME SECTION
+   ============================================ */
+
+.resume {
+  background: var(--bg-secondary);
+}
+
+.resume-wrapper {
+  max-width: 1152px; /* max-w-6xl - Match About section */
+  margin: 0 auto;
+  padding: 0 16px; /* px-4 */
+}
+
+/* ============================================
+   GLOW CONTAINER
+   ============================================ */
+
+.resume-glow-container {
+  position: relative;
+  padding: 80px 16px; /* py-20 px-4 - Increased vertical padding */
+  overflow: hidden;
+}
+
+/* ============================================
+   SOFT GLOW EFFECT
+   ============================================ */
+
+.resume-glow-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; /* w-[600px] - Wider to match bigger container */
+  height: 300px; /* h-[300px] */
+  background: rgba(219, 234, 254, 1); /* bg-blue-100 */
+  filter: blur(100px); /* blur-[100px] */
+  border-radius: 50%; /* rounded-full */
+  z-index: 0; /* -z-10 equivalent */
+  opacity: 0.6; /* opacity-60 */
+  pointer-events: none;
+}
+
+.resume h2 {
+  position: relative;
+  z-index: 1; /* Above the glow blob */
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-align: left;
+  font-size: clamp(28px, 4vw, 32px); /* text-2xl - Reduced from default for more refined look */
+}
+
+.resume-container {
+  position: relative;
+  z-index: 10; /* z-10 - Above the glow blob */
+  width: 100%;
+  max-width: 1152px; /* max-w-6xl - Match About section width */
+  margin: 0 auto;
+  padding: 48px; /* p-12 - More breathing room inside */
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px; /* rounded-3xl - Matches About section */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg - Better pop */
+  transition: var(--transition);
+}
+
+.resume-container:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   SPLIT LAYOUT (TWO COLUMNS)
+   ============================================ */
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px; /* gap-12 - More space between text and button */
+  align-items: center;
+}
+
+.resume-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* space-y-4 - Increased spacing slightly */
+  max-width: 768px; /* max-w-3xl - Wider text area */
+  margin: 0;
+}
+
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* gap-2 */
+  color: var(--accent-primary);
+  font-size: var(--fz-lg); /* text-lg - Increased text size slightly */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 8px; /* mb-2 */
+}
+
+.resume-header-icon {
+  font-size: 1.5rem; /* w-6 h-6 - Increased icon size */
+  color: var(--accent-primary);
+}
+
+.resume-action-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-description {
+  margin: 0;
+  font-size: var(--fz-lg); /* text-lg - Back to text-lg since we have space now */
+  line-height: 1.75; /* leading-relaxed */
+  color: #374151; /* text-gray-700 - darker for better readability */
+  text-align: left;
+  max-width: 768px; /* max-w-3xl */
+}
+
+.resume-line-break {
+  display: block;
+  margin-bottom: 12px; /* Adds breathing room after the line break */
+}
+
+.resume-description strong {
+  color: var(--text-heading); /* text-gray-900 */
+  font-weight: 600; /* font-semibold */
+}
+
+.download-prompt {
+  margin: 8px 0 0 0; /* mt-2 - Increased spacing slightly */
+  font-size: var(--fz-sm);
+  line-height: 1.6;
+  color: #9CA3AF; /* text-gray-400 */
+  text-align: left;
+  font-style: italic;
+}
+
+/* ============================================
+   DOWNLOAD BUTTON
+   ============================================ */
+
+.download-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* gap-2 */
+  padding: 16px 32px; /* px-8 py-4 - Button scaled up slightly to match the new big card */
+  font-size: var(--fz-lg); /* text-lg - Increased to match bigger card */
+  font-weight: 600; /* font-semibold */
+  color: var(--bg-primary);
+  text-decoration: none;
+  background: var(--accent-primary);
+  border-radius: 12px; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(37, 99, 235, 0.2); /* shadow-md shadow-blue-600/20 */
+  transition: var(--transition);
+  width: auto;
+  max-width: none;
+  text-align: center;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8; /* hover:bg-blue-700 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
+  opacity: 1;
+  text-decoration: none;
+  color: var(--bg-primary);
+}
+
+.download-icon {
+  font-size: 1.25rem; /* w-5 h-5 - Increased icon size */
+  transition: var(--transition);
+}
+
+.download-button:hover .download-icon {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.download-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .resume-wrapper {
+    padding: 0 16px;
+  }
+
+  .resume-glow-container {
+    padding: 40px 16px;
+  }
+
+  .resume-glow-blob {
+    width: 400px;
+    height: 250px;
+  }
+
+  .resume-container {
+    padding: 32px; /* Comfortable padding on mobile */
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .resume-action-section {
+    order: -1;
+  }
+
+  .resume-description {
+    font-size: var(--fz-md);
+    text-align: left;
+  }
+
+  .download-prompt {
+    font-size: var(--fz-sm);
+  }
+
+  .resume-text-section {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .download-button {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 36px;
+    font-size: var(--fz-md);
+  }
+}
