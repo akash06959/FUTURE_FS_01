@@ -31,7 +31,7 @@ const projects = [
     description: 'A premium e-commerce interface designed for fashion retail that combines fluid animations with robust state management, enabling shoppers to explore curated collections, customize product variants, and navigate a seamless, simulated checkout process.',
     techStack: ['React', 'State Management', 'Animations'],
     image: '/images/apparel-store.png',
-    githubUrl: 'https://github.com/akash06959/ApparelStore',
+    githubUrl: 'https://github.com/akash06959/FUTURE_FS_02',
     liveUrl: 'https://apparelstore-ecru.vercel.app/',
     hasLiveDemo: true,
   },
