@@ -12,8 +12,8 @@ const projects = [
     techStack: ['FastAPI', 'React', 'Python ML Models'],
     image: '/images/agronova-cover.webp',
     githubUrl: 'https://github.com/akash06959/Agronova',
-    liveUrl: 'https://agronova-dun.vercel.app/',
-    hasLiveDemo: false,
+    liveUrl: 'https://agronova-one.vercel.app',
+    hasLiveDemo: true,
   },
   {
     name: 'LearnHub',
@@ -22,18 +22,18 @@ const projects = [
     techStack: ['Django', 'React'],
     image: '/images/elearning-cover.webp',
     githubUrl: 'https://github.com/akash06959/Elearningplatform',
-    liveUrl: 'https://github.com/akash06959/Elearningplatform',
-    hasLiveDemo: false,
+    liveUrl: 'https://elearningplatform-three.vercel.app',
+    hasLiveDemo: true,
   },
   {
-    name: 'PcHaven',
-    tagline: 'Custom PC Showcase & Storefront',
-    description: 'A curated storefront experience for custom PCs that blends product storytelling with modular card layouts, enabling visitors to browse builds, compare specs, and jump to purchase links effortlessly.',
-    techStack: ['React', 'Tailwind CSS', 'Vite'],
-    image: '/images/pchaven-cover.webp',
-    githubUrl: 'https://github.com/akash06959/PcHaven',
-    liveUrl: 'https://github.com/akash06959/PcHaven',
-    hasLiveDemo: false,
+    name: 'Apparel Store',
+    tagline: 'Modern Apparel Storefront',
+    description: 'A premium e-commerce interface designed for fashion retail that combines fluid animations with robust state management, enabling shoppers to explore curated collections, customize product variants, and navigate a seamless, simulated checkout process.',
+    techStack: ['React', 'State Management', 'Animations'],
+    image: '/images/apparel-store.png',
+    githubUrl: 'https://github.com/akash06959/ApparelStore',
+    liveUrl: 'https://apparelstore-ecru.vercel.app/',
+    hasLiveDemo: true,
   },
 ];
 
@@ -145,7 +145,7 @@ const Projects = () => {
                     onClick={() => handleDemoClick(project)}
                     className="project-btn btn-demo"
                   >
-                    <FaExternalLinkAlt /> {project.hasLiveDemo ? 'Live Demo' : 'Watch Demo'}
+                    <FaExternalLinkAlt /> Live Demo
                   </button>
                 </div>
               </div>
