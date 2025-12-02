@@ -30,7 +30,7 @@ const Resume = () => {
               </p>
             </div>
             <div className="resume-action-section">
-              <a href="/resume/M.Akash_Resume().pdf" download="M.Akash_Resume.pdf" className="download-button">
+              <a href="/resume/M.Akash.pdf" download="M.Akash.pdf" className="download-button">
                 <FaDownload className="download-icon" />
                 <span>Download Resume (PDF)</span>
               </a>
